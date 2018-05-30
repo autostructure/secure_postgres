@@ -1,0 +1,18 @@
+---
+secure_postgres::pgdata: /var/lib/postgresql/data
+secure_postgres::postgresql_conf: ${pgdata}/postgresql.conf
+
+# logging params
+secure_postgres::log::enabled: false
+secure_postgres::log::threatlevel: warning
+
+# STIG enforcement
+secure_windows::stig::v72841::enforced: true
+secure_windows::stig::v72843::enforced: true
+secure_windows::stig::v72847::enforced: true
+secure_windows::stig::v72851::enforced: true
+secure_windows::stig::v72863::enforced: true
+secure_windows::stig::v72885::enforced: true
+secure_windows::stig::v72889::enforced: true
+secure_windows::stig::v72909::enforced: true
+secure_windows::stig::v72919::enforced: true

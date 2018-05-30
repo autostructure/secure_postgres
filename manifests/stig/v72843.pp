@@ -1,17 +1,9 @@
-# This class manages V-73223
-# Passwords for the built-in Administrator account must be changed at least every 60 days.
+# This class manages V-72843
+# PostgreSQL must produce audit records containing sufficient information to
+# establish the outcome (success or failure) of the events.
 class secure_postgres::stig::v72843 (
   Boolean $enforced = false,
 ) {
-  # secure_windows::stig::v72843
-  #
-  # Information system auditing capability is critical for accurate forensic analysis. Without information about the outcome of events,
-  # security personnel cannot make an accurate assessment as to whether an attack was successful or if changes were made to the security
-  # state of the system.
-  #
-  # Event outcomes can include indicators of event success or failure and event-specific results (e.g., the security state of the
-  # information system after the event occurred). As such, they also provide a means to measure the impact of an event and help authorized
-  # personnel to determine the appropriate response.
   file_line {
     default:
       * => $secure_postgres::file_line_postgresql_conf_defaults,;
