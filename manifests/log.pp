@@ -1,9 +1,9 @@
 #
 # This class centralizes log formatting for the module.
 #
-define secure_windows::log (
+define secure_postgres::log (
   Boolean $enabled = true,
-  Enum['alert', 'crit', 'debug', 'emerg', 'err', 'info', 'notice', 'warning'] $threatlevel = 'crit',
+  Enum['alert', 'crit', 'debug', 'emerg', 'err', 'info', 'notice', 'warning'] $threatlevel = 'notice',
 ) {
 
   if $enabled {
